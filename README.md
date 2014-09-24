@@ -1,7 +1,8 @@
 Filenado
 ========
 
-Python module to clean a directory
+Python module to clean a directory.
+
 User can import filenado.sort_dir
 or run from command line:
 **Usage**:
