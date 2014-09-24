@@ -1,8 +1,10 @@
+#!/usr/local/bin/python3
+
 import sys
 import os
 import re
 
-def sort_dir(dire, skip=''):
+def sort_dir(dire):
 	"""
 		Given a directory (string), sort all the files
 		into folders based on their extension
@@ -15,8 +17,9 @@ def sort_dir(dire, skip=''):
 			if file[0] == '.':
 				print('Hidden file: ' + file + ' skipping')
 				continue
-			if file == skip:
+			if file == __file__.replace('./', ''):
 				continue
+
 			splitted = re.split(r'\.\s*', file, maxsplit=1)
 			if len(splitted) == 1:
 				print('No file extension, skipping ' + file)
@@ -46,4 +49,4 @@ if __name__ == '__main__':
 	for arg in sys.argv:
 		if arg == sys.argv[0]:
 			continue
-		sort_dir(arg, sys.argv[0])
+		sort_dir(arg)
