@@ -4,7 +4,7 @@ Filenado
 Python module to clean a directory.
 
 User can import filenado.sort_dir
-or run from command line:
+or run from command line:<br />
 **Usage**:
 
 ```python filenado.py ./```
