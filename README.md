@@ -8,7 +8,7 @@ or run from command line:
 
 ```python filenado.py ./```
 
-** OR **
+**OR**
 
 ``` python filenado.py ./ /Users/local/sally/home ./Users/local/billy/home/Desktop ```
 
