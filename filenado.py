@@ -20,7 +20,7 @@ def sort_dir(dire):
 			if file == __file__.replace('./', ''):
 				continue
 
-			splitted = re.split(r'\.\s*', file, maxsplit=1)
+			splitted = re.split(r'\.\s*', file)
 			if len(splitted) == 1:
 				print('No file extension, skipping ' + file)
 				continue
