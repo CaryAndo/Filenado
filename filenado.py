@@ -16,7 +16,7 @@ def sort_dir(dire):
             if os.path.isdir(single_file):
                 continue
             if single_file[0] == '.':
-                print('Hidden single_file: ' + single_file + ' skipping')
+                print('Hidden file: ' + single_file + ' skipping')
                 continue
             if single_file == single_file.replace('./', ''):
                 continue
@@ -29,18 +29,18 @@ def sort_dir(dire):
             if os.path.isdir(directory + '/' + extension):
                 print("apparently " + directory + '/' + extension + ' is a folder!')
                 try:
-                    print("tring to move to " + directory + '/' + extension + '/' + single_file)
+                    print("String to move to " + directory + '/' + extension + '/' + single_file)
                     os.rename(directory + '/' + single_file, directory + '/' + extension + '/' + single_file)
                     print('moved ' + single_file + ' to ' + '.' + extension + '/' + single_file)
                 except OSError:
-                    print('Failed to move single_file: ' + single_file + '!')
+                    print('Failed to move file: ' + single_file + '!')
             else:
                 os.mkdir(directory + '/' + extension)
                 print("created " + directory + '/' + extension)
                 try:
                     os.rename(directory + '/' + single_file, './' + extension + '/' + single_file)
                 except OSError:
-                    print('Failed to move single_file: ' + directory + '!')
+                    print('Failed to move file: ' + directory + '!')
     elif os.path.isfile(directory):
         print(directory + ' is not a directory!')
     else:
