@@ -18,7 +18,7 @@ def sort_dir(dire):
             if single_file[0] == '.':
                 print('Hidden file: ' + single_file + ' skipping')
                 continue
-            if single_file == single_file.replace('./', ''):
+            if single_file == __file__.replace('./', ''):
                 continue
 
             splitted = re.split(r'\.\s*', single_file)
